@@ -1,0 +1,27 @@
+{
+  "name": "@sign/settings",
+  "version": "0.0.1",
+  "description": "Default templates and guidelines for `sign` repositories on GitHub.",
+  "scripts": {
+    "lint": "npx prettier --check .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sign/.github.git"
+  },
+  "author": "Amit Moryossef",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/sign/.github/issues"
+  },
+  "homepage": "https://github.com/sign/.github#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

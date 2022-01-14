@@ -1,0 +1,29 @@
+name: 💡 Feature REquest
+description: Suggest a new feature or improvements to an existing one
+labels: [enhancement]
+title: "[Feature] <Replace this with actual title>"
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: Describe a problem solved by this feature.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the feature and how it solves the problem.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Alternatives
+      description: Describe any alternative solutions or features you have considered. How is this feature better?
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context about the feature here.
+    validations:
+      required: false

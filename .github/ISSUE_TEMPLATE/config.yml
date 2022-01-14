@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Email Us
+    url: mailto:support@sign.mt
+    about: Use only in case of a sensitive issue. If it may as well be public, it might be ignored.
