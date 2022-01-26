@@ -1,5 +1,5 @@
 {
-  "name": "@sign/settings",
+  "name": "@sign/configuration",
   "version": "0.0.1",
   "description": "Default templates and guidelines for `sign` repositories on GitHub.",
   "scripts": {

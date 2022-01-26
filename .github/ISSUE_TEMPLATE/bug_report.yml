@@ -1,7 +1,7 @@
 name: 🐞 Report a bug
 description: File a bug/issue
 labels: [bug]
-title: "[BUG] <Replace this with actual title>"
+title: '[BUG] <Replace this with actual title>'
 body:
   - type: markdown
     attributes:

@@ -1,7 +1,7 @@
 name: 💡 Feature REquest
 description: Suggest a new feature or improvements to an existing one
 labels: [enhancement]
-title: "[Feature] <Replace this with actual title>"
+title: '[Feature] <Replace this with actual title>'
 body:
   - type: textarea
     attributes:
