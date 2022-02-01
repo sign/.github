@@ -1,6 +1,10 @@
 {
   "name": "@sign/configuration",
   "version": "0.0.1",
+  "title": ".github",
+  "icon": {
+    "emoji": "⚙️"
+  },
   "description": "Default templates and guidelines for `sign` repositories on GitHub.",
   "scripts": {
     "lint": "npx prettier --check .",

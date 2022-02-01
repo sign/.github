@@ -14,6 +14,8 @@ Social IDs should be as close as possible to `sign` or `sign.mt`
 
 | Platform                                             | Name    | Id            |
 | ---------------------------------------------------- | ------- | ------------- |
+| [GitHub](https://www.github.com/sign)                | sign    | `sign`        |
+| [Huggingface](https://huggingface.co/sign)           | sign.mt | `sign`        |
 | [Facebook](https://www.facebook.com/sign.mt.ltd)     | sign.mt | `sign.mt.ltd` |
 | [Twitter](https://twitter.com/signmt_)               | sign.mt | `signmt_`     |
 | [LinkedIn](https://www.linkedin.com/company/sign-mt) | sign.mt | `sign-mt`     |
