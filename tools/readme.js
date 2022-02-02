@@ -1,29 +1,18 @@
 /*** This file generates the README header file for all `sign` repositories ***/
 const path = require('path');
 const fs = require('fs');
-
-const parentDir = path.join(__dirname, '../', '../');
+const iterPackages = require('./_packages');
 
 const documentsUrl = 'https://github.com/sign/.github/blob/main/';
 
-for (const match of fs.readdirSync(parentDir)) {
-  if (match === '.DS_Store') {
-    continue;
-  }
+for (const [packagePath, packageJson] of iterPackages()) {
+  const readmePath = path.join(packagePath, 'README.md');
 
-  const fullPath = path.join(parentDir, match);
-  if (!fs.lstatSync(fullPath).isDirectory()) {
-    continue;
-  }
-
-  const readmePath = path.join(fullPath, 'README.md');
-
-  let packageJson, readmeMd;
+  let readmeMd;
   try {
-    packageJson = JSON.parse(String(fs.readFileSync(path.join(fullPath, 'package.json'))));
     readmeMd = String(fs.readFileSync(readmePath));
   } catch (e) {
-    console.error(match, 'is missing package.json or README.md');
+    console.error(match, 'is missing README.md');
     console.error(e);
   }
 
@@ -31,7 +20,7 @@ for (const match of fs.readdirSync(parentDir)) {
     continue;
   }
 
-  const readmeBody = readmeMd.slice(readmeMd.indexOf('----'));
+  const readmeBody = readmeMd.slice(readmeMd.indexOf('---') - 1);
   const title = `${packageJson.icon?.emoji}️ \`sign\`/${packageJson.title}`;
   const readmeHead = `# ${title}
 
