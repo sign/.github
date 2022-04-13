@@ -14,6 +14,10 @@ module.exports = function* () {
       continue;
     }
 
+    if (!fs.existsSync(path.join(fullPath, 'package.json'))) {
+      continue;
+    }
+
     let packageJson;
     try {
       packageJson = JSON.parse(String(fs.readFileSync(path.join(fullPath, 'package.json'))));

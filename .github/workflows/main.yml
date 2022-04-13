@@ -37,7 +37,7 @@ jobs:
 
       - name: Test code
         if: ${{ fromJSON(steps.package.outputs.content).scripts.test }}
-        run: npm run test
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
 
       - name: Coveralls
         if: ${{ fromJSON(steps.package.outputs.content).scripts.test }}

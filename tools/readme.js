@@ -28,8 +28,7 @@ ${packageJson.description}
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](${documentsUrl}LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](${documentsUrl}CODE_OF_CONDUCT.md)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](${documentsUrl}CONTRIBUTING.md)  
-`;
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](${documentsUrl}CONTRIBUTING.md)`;
 
   console.log(title);
   fs.writeFileSync(readmePath, readmeHead + '\n' + readmeBody);

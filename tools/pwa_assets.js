@@ -4,6 +4,7 @@ const fs = require('fs');
 const iterPackages = require('./_packages');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
+const { run } = require('cordova-res');
 
 async function main() {
   for (const [packagePath, packageJson] of iterPackages()) {
@@ -28,9 +29,19 @@ async function main() {
 
     manifestJson.name = 'sign ' + packageJson.title;
     manifestJson.short_name = packageJson.title;
+    manifestJson.id = packageJson.title.toLowerCase() + '.sign.mt';
     manifestJson.description = packageJson.description;
     manifestJson.theme_color = packageJson.color;
     fs.writeFileSync(manifestPath, JSON.stringify(manifestJson, null, 2));
+
+    // Update the index title
+    let indexHtml = String(fs.readFileSync(indexPath));
+    indexHtml = indexHtml.replace(/<title>(.*?)<\/title>/g, `<title>${manifestJson.name}</title>`);
+    indexHtml = indexHtml.replace(
+      /<meta name="theme-color" content="(.*?)" \/>/g,
+      `<meta name='theme-color' content='${packageJson.color}' />`
+    );
+    fs.writeFileSync(indexPath, indexHtml);
 
     // Generate the icon from material icons
     const materialName = packageJson.icon.material;
@@ -49,11 +60,11 @@ async function main() {
     const favIcon = svg.replace(
       '<path',
       `
-  <style>
-    path {fill: black;}
-    @media (prefers-color-scheme: dark) {  path {fill: white;}  }
-  </style>
-  <path`
+    <style>
+      path {fill: black;}
+      @media (prefers-color-scheme: dark) {  path {fill: white;}  }
+    </style>
+    <path`
     );
     fs.writeFileSync(path.join(iconsPath, 'favicon.svg'), favIcon);
 
@@ -67,6 +78,19 @@ async function main() {
       console.log(stdout);
       console.error(stderr);
     }
+
+    // // App Icons
+    // const options = {
+    //   directory: packagePath,
+    //   resourcesDirectory: 'resources',
+    //   logstream: process.stdout, // Any WritableStream
+    //   platforms: {
+    //     android: { icon: { sources: [outputFilePath] } }
+    //     // ios: { splash: { sources: ['resources/splash.png'] } },
+    //   }
+    // };
+    //
+    // await run(options);
   }
 }
 

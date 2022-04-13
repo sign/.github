@@ -1,4 +1,4 @@
-`sign`'s mission is advancing sign language technology,
-bringing language inclusion for all.
+# [sign.mt](https://sign.mt/)
 
-© sign.mt ltd 2022
+Our mission is advancing sign language technology,
+bringing language inclusion for all.
