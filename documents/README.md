@@ -1,6 +1,6 @@
 # Official Documents
 
-The company was [incorporated](documents/incorporation_certificate.pdf) in Israel on January 19th, 2022.
+The company was [incorporated](incorporation_certificate.pdf) in Israel on January 19th, 2022.
 
 - Company ID: 516541570
 - English Name: `SIGN.MT LTD`
