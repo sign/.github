@@ -86,3 +86,19 @@ By making a contribution to this project, I certify that:
 ```
 
 </details>
+
+<details>
+<summary>Further Conditions</summary>
+
+```
+(e) This contribution does not grant me any rights to use the
+    name of the project, the name of the author, the name of the
+    organization, or the name of the author's organization in any
+    advertising or publicity relating to this project or the
+    contribution.
+(f) This contribution does not grant me rights to any trademark or service
+    mark belonging to the project, the author, the organization, or the
+    author's organization.
+```
+
+</details>
